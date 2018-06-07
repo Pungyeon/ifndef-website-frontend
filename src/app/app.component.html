@@ -1,4 +1,4 @@
-<mat-toolbar>
+<mat-toolbar style="background: #4285f4; color: #fff">
   <span>Pungy</span>
 </mat-toolbar>
 
@@ -43,9 +43,13 @@
     <mat-card *ngFor="let article of articles" style="margin-top: 10px">
       <mat-card-header>
         <mat-card-title> {{article.Title}} </mat-card-title>
-        <mat-card-subtitle> {{article.Description}} </mat-card-subtitle>
+        <mat-card-subtitle> {{article.Date}} </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
+          <div>
+              {{article.Description}}
+          </div>
+
           <button mat-icon-button style="font-size:1em;color=red">
             <i class="fas fa-heart"></i>{{article.Likes}}
           </button>
@@ -55,6 +59,9 @@
           <button mat-icon-button style="font-size:1em;color=red">
             <i class="fas fa-share-square"></i>{{article.Likes}}
           </button>
+          <mat-chip-list>
+              <mat-chip *ngFor="let tag of article.Tags">{{tag}}</mat-chip>
+            </mat-chip-list>
       </mat-card-content>
     </mat-card>
   </div>      
