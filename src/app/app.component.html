@@ -1,23 +1,61 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <button mat-button> Ey, a button! </button>
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+<mat-toolbar>
+  <span>Pungy</span>
+</mat-toolbar>
+
+<!-- container -->
+<div class="container"
+  fxLayout
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="10px">
+  <div fxFlex="40%">
+    <mat-card style="margin-top: 10px" >
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Lase Martin Jakobsen</mat-card-title>
+        <mat-card-subtitle>Software Engineer</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <h4> Biography </h4>
+        <p>
+          Lasse has a strong technical knowledge of network security and optimisation, consulting some of the largest companies in the Denmark, delivering solutions for automating analysis and simplifying network troubleshooting. Lasse has in experience in a large array of technologies, specialising in C# and Golang. Since the start of 2017, Lasse has been the technical lead for several demanding projects, providing on-time and reliable solutions.
+        </p>
+    
+        <h4> Contact </h4>
+        <a style="font-size:2em; color:black" href="https://github.com/Pungyeon">
+            <i class="fab fa-github"></i>
+        </a>
+        <button mat-icon-button style="font-size:2em; color:darkblue">
+            <i class="fab fa-linkedin"></i>
+        </button>
+        <button mat-icon-button style="font-size:2em; color:lightblue">
+            <i class="fab fa-twitter"></i>
+        </button>
+        <button mat-icon-button style="font-size:2em; color:red">
+            <i class="far fa-envelope"></i>
+        </button>
+    
+      </mat-card-content>
+      
+    </mat-card>
+  </div>  
+  <div fxFlex="60%">
+    <mat-card *ngFor="let article of articles" style="margin-top: 10px">
+      <mat-card-header>
+        <mat-card-title> {{article.Title}} </mat-card-title>
+        <mat-card-subtitle> {{article.Description}} </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+          <button mat-icon-button style="font-size:1em;color=red">
+            <i class="fas fa-heart"></i>{{article.Likes}}
+          </button>
+          <button mat-icon-button style="font-size:1em;color=red">
+            <i class="fas fa-comment"></i>{{article.Likes}}
+          </button>
+          <button mat-icon-button style="font-size:1em;color=red">
+            <i class="fas fa-share-square"></i>{{article.Likes}}
+          </button>
+      </mat-card-content>
+    </mat-card>
+  </div>      
 </div>
