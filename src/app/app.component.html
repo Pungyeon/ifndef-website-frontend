@@ -9,6 +9,7 @@
   fxLayoutAlign="center"
   fxLayoutGap="10px">
   <div fxFlex="40%">
+    <h2>About Me</h2>
     <mat-card style="margin-top: 10px" >
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
@@ -20,7 +21,25 @@
         <p>
           Lasse has a strong technical knowledge of network security and optimisation, consulting some of the largest companies in the Denmark, delivering solutions for automating analysis and simplifying network troubleshooting. Lasse has in experience in a large array of technologies, specialising in C# and Golang. Since the start of 2017, Lasse has been the technical lead for several demanding projects, providing on-time and reliable solutions.
         </p>
-    
+      </mat-card-content>
+    </mat-card>
+    <h2>Experience</h2>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let job of experience">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{job.Company}}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{job.Title}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>{{job.Description}}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  
+    <mat-card style="margin-top: 10px" >
+      <mat-card-content>
         <h4> Contact </h4>
         <a style="font-size:2em; color:black" href="https://github.com/Pungyeon">
             <i class="fab fa-github"></i>
@@ -34,12 +53,11 @@
         <button mat-icon-button style="font-size:2em; color:red">
             <i class="far fa-envelope"></i>
         </button>
-    
       </mat-card-content>
-      
     </mat-card>
   </div>  
   <div fxFlex="60%">
+    <h2>Articles</h2>
     <mat-card *ngFor="let article of articles" style="margin-top: 10px">
       <mat-card-header>
         <mat-card-title> {{article.Title}} </mat-card-title>
@@ -49,7 +67,7 @@
           <div>
               {{article.Description}}
           </div>
-
+          <img mat-card-image src={{article.Image}} style="height: 150px; object-fit: cover; width: 98%; margin: 1%">
           <button mat-icon-button style="font-size:1em;color=red">
             <i class="fas fa-heart"></i>{{article.Likes}}
           </button>
