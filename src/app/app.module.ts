@@ -15,6 +15,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { ArticleComponent } from './article/article.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { NgxMdModule } from 'ngx-md';
+import { StateService } from 'src/app/service/state.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,9 +41,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatExpansionModule,
     MatListModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMdModule.forRoot()
   ],
-  providers: [],
+  providers: [StateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

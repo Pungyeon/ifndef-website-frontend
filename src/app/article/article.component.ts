@@ -1,6 +1,14 @@
 import { Component, OnInit, Testability } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import 'prismjs/prism';
+import 'prismjs/components/prism-go';
+import 'prismjs/components/prism-docker';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-yaml';
+import 'prismjs/components/prism-nginx';
+import { StateService } from '../service/state.service';
+
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
@@ -8,14 +16,17 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ArticleComponent implements OnInit {
 
-  public content = "";
+  public content = "## Nothing yet";
+  private mdLink = "";
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(
+    private stateService: StateService
+  ) {}
 
   ngOnInit() {
-    this.httpClient.get("https://raw.githubusercontent.com/Pungyeon/go-rabbitmq-example/master/README.md", {responseType: 'text'}).subscribe((data: string) => {
+    this.stateService.selectedArticleSub.subscribe((data) => {
+      console.log("mdlink changed: " + this.mdLink);
       this.content = data;
     });
   }
-
 }

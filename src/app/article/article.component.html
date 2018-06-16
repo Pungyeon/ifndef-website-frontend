@@ -1,3 +1,13 @@
-<p>
-  article works!
-</p>
+<div class="container"
+fxLayout
+fxLayout.xs="column"
+fxLayoutAlign="center">
+<div fxFlex="60%">
+    <a routerLink="/articles" mat-button style="margin-top: 10px; color: #999">
+        <mat-icon>keyboard_backspace</mat-icon> Back to Articles
+    </a>
+    <mat-card>
+        <ngx-md [data]="content">
+        </ngx-md>
+    </mat-card>
+</div>
