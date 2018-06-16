@@ -6,3 +6,7 @@ a {
     font-size:1em;
     color:#999
 }
+
+.app-class .mat-list-item {
+    height: auto;
+  }

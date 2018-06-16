@@ -10,14 +10,14 @@
   <div fxFlex="80%" fxLayoutAlign="center"> 
     <div fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="15px">
       <mat-card 
-        fxFlex="calc(20%+15px)"
-        fxFlex.md="calc(27%+15px)"
-        fxFlex.sm="calc(40%+15px)"
-        fxFlex.xs="calc(80%+15px)"
+        fxFlex.gt-md="calc(20%)"
+        fxFlex.md="calc(27%)"
+        fxFlex.sm="calc(40%)"
+        fxFlex.xs="calc(80%)"
         *ngFor="let article of articles"
         (click)="onArticleSelect(article)"
         >
-        <img mat-card-image src={{article.Image}} style="height: 150px; object-fit: contain; width: 99%; margin: 0.5%">  
+        <img mat-card-image class="article-image" src={{article.Image}} style="height: 150px; object-fit: contain; width: 99%; margin: 0.5%">  
         <mat-card-content>
           <li style="list-style-type: none; margin: 10px 0 10px 0">
             <span class="tag" *ngFor="let tag of article.Tags">{{tag.toUpperCase()}}</span>
