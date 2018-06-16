@@ -4,3 +4,48 @@
 * {
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
+
+.example-card {
+    max-width: 400px;
+}
+  
+.example-header-image {
+    background-image: url('/assets/lasse.jpeg');
+    background-size: cover;
+}
+
+.full-width {
+    width: 100%;
+}
+
+h2 {
+    color: #777;
+    font-weight: 100;
+}
+
+.tag {
+    margin-right: 15px;
+    font-weight: 600;
+    color: #4286f4a6;
+    font-size: 12px;
+}
+
+.footer {
+    margin-right: 10px;
+    font-weight: 600;
+    color: #757575;
+    font-size: 12px;
+}
+
+.mat-card {
+    padding: 14px;
+    margin: 10px 0 10px 0;
+}
+
+a {
+    text-decoration: none
+}
+
+a:visited {
+    color: white;
+}
