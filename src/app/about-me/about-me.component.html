@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 <h2 class="pungy-title">About Me</h2>
+=======
+>>>>>>> af56a6f9aa62442113b06a9c9e81d081f497afad
 <div class="container"
 fxLayout
 fxLayout.xs="column"
 fxLayoutAlign="center">
-  <div fxFlex="60%">
-    <div>
+<div fxFlex="60%">
+  <div>
+      <h2>About Me</h2>
       <mat-card style="margin-top: 10px" >
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
@@ -12,20 +16,27 @@ fxLayoutAlign="center">
           <mat-card-subtitle>Software Engineer</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <h4> Biography </h4>
+          <h4> Bio </h4>
           <p>
             Lasse has a strong technical knowledge of network security and optimisation, consulting some of the largest companies in the Denmark, delivering solutions for automating analysis and simplifying network troubleshooting. Lasse has in experience in a large array of technologies, specialising in C# and Golang. Since the start of 2017, Lasse has been the technical lead for several demanding projects, providing on-time and reliable solutions.
           </p>
           <h4> Contact </h4>
             <a class="contact-icon" href="https://github.com/Pungyeon">
               <i class="fab fa-github" style="color: black"></i> Pungyeon
+<<<<<<< HEAD
             </a>
             <a class="contact-icon" href="https://www.linkedin.com/in/lasse-martin-jakobsen-6765b64b/">
               <i class="fab fa-linkedin" style="color: black"></i> LinkedIn
             </a>
+=======
+            </a><br>
+              <a class="contact-icon" href="https://www.linkedin.com/in/lasse-martin-jakobsen-6765b64b/">
+                <i class="fab fa-linkedin" style="color: black"></i> LinkedIn
+            </a><br>
+>>>>>>> af56a6f9aa62442113b06a9c9e81d081f497afad
             <a class="contact-icon" href="https://twitter.com/ifndef_lmj">
                 <i class="fab fa-twitter" style="color: black"></i> #ifndef_lmj
-            </a>
+            </a><br>
             <a class="contact-icon" href="mailto:lja@pungy.dk">
                 <i class="far fa-envelope" style="color: black"></i> lja@pungy.dk
             </a>  
@@ -42,7 +53,13 @@ fxLayoutAlign="center">
               {{job.Title}}
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <p>{{job.Description}}</p>
+          <h4> Projects </h4>
+          <mat-divider style="margin-top: 10px"></mat-divider>
+          <p *ngFor="let project of job.Projects">
+            {{project}}
+            <mat-divider style="margin-top: 10px"></mat-divider>
+          </p>
+          
         </mat-expansion-panel>
       </mat-accordion>
 

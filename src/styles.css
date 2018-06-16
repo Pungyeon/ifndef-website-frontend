@@ -42,3 +42,15 @@
     padding: 14px;
     margin: 10px 0 10px 0;
 }
+<<<<<<< HEAD
+=======
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+>>>>>>> af56a6f9aa62442113b06a9c9e81d081f497afad

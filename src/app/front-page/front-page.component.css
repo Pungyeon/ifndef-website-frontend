@@ -1,8 +1,13 @@
 .circle-img {
     border-radius: 100%;
     max-height: 400px;
+<<<<<<< HEAD
     width: auto;
     height: auto;
+=======
+    height: auto;
+    width: auto;
+>>>>>>> af56a6f9aa62442113b06a9c9e81d081f497afad
     margin-top: 20px;
 }
 
