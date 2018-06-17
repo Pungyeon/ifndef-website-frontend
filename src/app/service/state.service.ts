@@ -55,7 +55,6 @@ export class StateService {
         } 
     ]
 
-
     setSelectedArticle(mdLink: string) {
         this.httpClient.get(mdLink, { responseType: 'text'}).subscribe((data) => {
             this.selectedArticle = data;
