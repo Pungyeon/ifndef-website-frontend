@@ -21,13 +21,14 @@ export class ArticlesComponent implements OnInit {
   ngOnInit() {
     this.stateService.articlesSub.subscribe((data) => {
       this.articles = data;
-      this.stateService.setSelectedArticle(this.articles[0].MarkdownLink);
+      this.stateService.setSelectedArticle(this.articles[0]);
     });
     this.stateService.getArticles();
   }
 
-  onArticleSelect(article: any) {
-    this.stateService.setSelectedArticle(article.MarkdownLink);
+  onArticleSelect(article: Article) {
+    this.stateService.increasetViewCount(article);
+    this.stateService.setSelectedArticle(article);
     this.router.navigate(['/article']);
   }
 }

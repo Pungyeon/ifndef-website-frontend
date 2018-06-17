@@ -1,14 +1,18 @@
-
 <!-- container -->
-<div>
-  <h2 class="pungy-title">Articles</h2>
+<div class="container"
+fxLayout 
+fxLayout.xs="column"
+fxLayoutAlign="center">
+  <div fxFlex="80%" fxLayout="row nowrap">
+    <h2 class="pungy-title"> Articles </h2>
+  </div>
 </div>
 <div class="container"
-fxLayout="row"
+fxLayout 
 fxLayout.xs="column"
-fxLayoutAlign="space-evenly center">
-<div fxFlex="80%"> 
-    <div fxLayout="row wrap" fxLayoutGap.gt-xs="15px">
+fxLayoutAlign="center">
+<div> 
+    <div fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap.gt-xs="15px">
       <mat-card
         fxFlex.gt-md="0 1 calc(20%)"
         fxFlex.md="0 1 calc(27%)"
@@ -24,10 +28,10 @@ fxLayoutAlign="space-evenly center">
           </li>
           <mat-card-title> {{article.Title}} </mat-card-title>
           <li style="list-style-type: none; margin: 10px 0 10px 0">
-            <span class="footer"> {{article.Date}} </span>
+            <span class="footer"> {{article.ArticleDate}} </span>
             <span class="footer"> • </span>
             <span class="footer">
-                {{article.Likes}} COMMENTS
+                {{article.ViewCount}} VIEWS
             </span>
           </li>
         </mat-card-content>
@@ -35,13 +39,3 @@ fxLayoutAlign="space-evenly center">
     </div>      
   </div>
 </div>
-
-<!-- button mat-icon-button style="font-size:1em;">
-  <i class="fas fa-heart"></i>{{article.Likes}}
-</button>
-<button mat-icon-button style="font-size:1em;">
-  <i class="fas fa-comment"></i>{{article.Likes}}
-</button>
-<button mat-icon-button style="font-size:1em;">
-  <i class="fas fa-share-square"></i>{{article.Likes}}
-</button -->

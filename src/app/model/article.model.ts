@@ -1,8 +1,10 @@
 export class Article {
+    ArticleId: number;
+    ArticleDate: string;
     Title: string;
     Description: string;
-    Date: string;
     Tags: string[];
     Image: string;
+    ViewCount: number;
     MarkdownLink: string;
 }
