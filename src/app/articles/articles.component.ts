@@ -9,7 +9,6 @@ import { Article } from 'src/app/model/article.model';
   styleUrls: ['./articles.component.css']
 })
 export class ArticlesComponent implements OnInit {
-
   articles: Article[] = [];
 
   constructor(

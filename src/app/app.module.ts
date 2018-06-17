@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCardModule, MatToolbarModule, MatGridListModule, MatIconModule, MatChipsModule, MatExpansionModule, MatListModule} from '@angular/material';
+import {MatProgressSpinnerModule, MatButtonModule, MatCardModule, MatToolbarModule, MatGridListModule, MatIconModule, MatChipsModule, MatExpansionModule, MatListModule} from '@angular/material';
 import {MatBadgeModule} from '@angular/material/badge';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
@@ -44,6 +44,7 @@ import { TestComponent } from './test/test.component';
     MatListModule,
     AppRoutingModule,
     HttpClientModule,
+    MatProgressSpinnerModule,
     NgxMdModule.forRoot()
   ],
   providers: [StateService],

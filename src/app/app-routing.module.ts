@@ -7,12 +7,11 @@ import { ArticleComponent } from "./article/article.component";
 import { TestComponent } from "./test/test.component";
 
 const routes: Routes = [
-    { path: '', redirectTo: 'test', pathMatch: 'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: FrontPageComponent },
     { path: 'about', component: AboutMeComponent },
     { path: 'articles', component: ArticlesComponent },
-    { path: 'article', component: ArticleComponent},
-    { path: 'test', component: TestComponent }
+    { path: 'article', component: ArticleComponent}
   ];
   
   @NgModule({
