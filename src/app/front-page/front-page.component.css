@@ -1,7 +1,7 @@
 .circle-img {
     border-radius: 100%;
     max-height: 400px;
-    width: auto;
+    width: 100%;
     height: auto;
     margin-top: 20px;
 }
