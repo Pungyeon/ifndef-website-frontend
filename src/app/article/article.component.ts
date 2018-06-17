@@ -17,7 +17,6 @@ import { StateService } from '../service/state.service';
 export class ArticleComponent implements OnInit {
 
   public content = "## Nothing yet";
-  private mdLink = "";
 
   constructor(
     private stateService: StateService
@@ -25,7 +24,6 @@ export class ArticleComponent implements OnInit {
 
   ngOnInit() {
     this.stateService.selectedArticleSub.subscribe((data) => {
-      console.log("mdlink changed: " + this.mdLink);
       this.content = data;
     });
   }
