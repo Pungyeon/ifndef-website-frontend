@@ -46,9 +46,21 @@
 
 a {
     text-decoration: none;
-    color: black;
+    color: #46A;
 }
 
 a:visited {
-    color: black;
+    color: #46A;
+}
+
+blockquote {
+    background: #EFEEEE;
+    padding: 1px 10px 1px 10px;
+    border-left: 4px solid #BBB
+}
+
+pre {
+    background: #2d2d2d;
+    padding: 10px;
+    color: #CCC;
 }

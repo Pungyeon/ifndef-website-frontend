@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { NgxMdModule } from 'ngx-md';
 import { StateService } from 'src/app/service/state.service';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StateService } from 'src/app/service/state.service';
     AboutMeComponent,
     TagComponent,
     ArticlesComponent,
-    ArticleComponent
+    ArticleComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
