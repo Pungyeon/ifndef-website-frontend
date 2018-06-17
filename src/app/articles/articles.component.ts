@@ -10,6 +10,7 @@ import { Article } from 'src/app/model/article.model';
 })
 export class ArticlesComponent implements OnInit {
   articles: Article[] = [];
+  loading = true;
 
   constructor(
     private stateService: StateService,
@@ -21,6 +22,7 @@ export class ArticlesComponent implements OnInit {
     this.stateService.articlesSub.subscribe((data) => {
       this.articles = data;
       this.stateService.setSelectedArticle(this.articles[0]);
+      this.loading = false;
     });
     this.stateService.getArticles();
   }
