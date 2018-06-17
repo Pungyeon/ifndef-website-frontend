@@ -4,15 +4,15 @@ fxLayout.xs="column"
 fxLayoutAlign="center">
 <div fxFlex="60%">
   <div>
-      <h2>About Me</h2>
+      <h2 class="pungy-title">About Me</h2>
       <mat-card style="margin-top: 10px" >
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
+          <div style="height:60px;width:60px" mat-card-avatar class="example-header-image"></div>
           <mat-card-title>Lase Martin Jakobsen</mat-card-title>
           <mat-card-subtitle>Software Engineer</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <h4> Bio </h4>
+          <h4 style="margin-top: 15px;"> Bio </h4>
           <p>
             Lasse has a strong technical knowledge of network security and optimisation, consulting some of the largest companies in the Denmark, delivering solutions for automating analysis and simplifying network troubleshooting. Lasse has in experience in a large array of technologies, specialising in C# and Golang. Since the start of 2017, Lasse has been the technical lead for several demanding projects, providing on-time and reliable solutions.
           </p>
@@ -21,13 +21,13 @@ fxLayoutAlign="center">
               <i class="fab fa-github" style="color: black"></i> Pungyeon
             </a><br>
               <a class="contact-icon" href="https://www.linkedin.com/in/lasse-martin-jakobsen-6765b64b/">
-                <i class="fab fa-linkedin" style="color: black"></i> LinkedIn
+                <i class="fab fa-linkedin" style="color: #0077B5"></i> LinkedIn
             </a><br>
             <a class="contact-icon" href="https://twitter.com/ifndef_lmj">
-                <i class="fab fa-twitter" style="color: black"></i> #ifndef_lmj
+                <i class="fab fa-twitter" style="color: rgb(27, 149, 224);"></i> #ifndef_lmj
             </a><br>
             <a class="contact-icon" href="mailto:lja@pungy.dk">
-                <i class="far fa-envelope" style="color: black"></i> lja@pungy.dk
+                <i class="far fa-envelope" style="color: #dd5347"></i> lja@pungy.dk
             </a>  
         </mat-card-content>
       </mat-card>
@@ -42,6 +42,9 @@ fxLayoutAlign="center">
               {{job.Title}}
             </mat-panel-description>
           </mat-expansion-panel-header>
+          <p style="font-style: italic; color: #999">{{job.Date}}</p>
+          <h4>Description</h4>
+          <p>{{job.Description}}</p>
           <h4> Projects </h4>
           <mat-divider style="margin-top: 10px"></mat-divider>
           <p *ngFor="let project of job.Projects">
@@ -51,24 +54,6 @@ fxLayoutAlign="center">
           
         </mat-expansion-panel>
       </mat-accordion>
-
-      <h2 class="pungy-title"> Contact </h2>
-      <mat-card style="margin-top: 10px" >
-        <mat-card-content>
-          <a style="font-size:2em; color:black" href="https://github.com/Pungyeon">
-              <i class="fab fa-github"></i>
-          </a>
-          <button mat-icon-button style="font-size:2em; color:darkblue">
-              <i class="fab fa-linkedin"></i>
-          </button>
-          <button mat-icon-button style="font-size:2em; color:lightblue">
-              <i class="fab fa-twitter"></i>
-          </button>
-          <button mat-icon-button style="font-size:2em; color:red">
-              <i class="far fa-envelope"></i>
-          </button>
-        </mat-card-content>
-      </mat-card>
     </div>  
   </div>
 </div>

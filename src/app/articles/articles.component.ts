@@ -24,7 +24,7 @@ export class ArticlesComponent implements OnInit {
       Title: "Implementing Authentication for Golang Gin API, using Auth0",
       Likes: 0, Date: "2018-08-20",
       Tags: ["golang", "auth0"],
-      Image: ["/assets/placeholder.png"],
+      Image: ["/assets/auth0.png"],
       MarkdownLink: "https://raw.githubusercontent.com/Pungyeon/vim-setup/master/README.md"
     },
     { 
@@ -32,7 +32,8 @@ export class ArticlesComponent implements OnInit {
       Likes: 2, Date: "2018-08-20",
       Tags: ["nginx", "api gateway"],
       Image: "https://cdn-1.wp.nginx.com/wp-content/uploads/2015/04/NGINX_logo_rgb-01.png",
-      MarkdownLink: "https://raw.githubusercontent.com/Pungyeon/docker-example/master/README.md"
+      MarkdownLink: "https://raw.githubusercontent.com/Pungyeon/docker-nginx-example/master/README.md"
+      
     },
     { Title: "Introduction to RabbitMQ using Golang and Docker", Description: "Brief introduciton to using RabbitMQ with Golang", 
       Likes: 2, Date: "2018-08-20",
@@ -50,7 +51,7 @@ export class ArticlesComponent implements OnInit {
       Likes: 2, Date: "2018-08-20",
       Tags: ["docker", "nodejs"],
       Image: "https://www.fullstackpython.com/img/logos/docker-wide.png",
-      MarkdownLink: "https://raw.githubusercontent.com/Pungyeon/docker-nginx-example/master/README.md"
+      MarkdownLink: "https://raw.githubusercontent.com/Pungyeon/docker-example/master/README.md"
     } 
   ]
 
