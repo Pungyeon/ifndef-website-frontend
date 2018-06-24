@@ -3,15 +3,25 @@
 @import 'prismjs/themes/prism-tomorrow.css';
 
 * {
-    font-family: 'Calibri', 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-family: 'Helvetica Neue','Calibri',Helvetica,Arial,sans-serif;
 }
 
 .example-card {
     max-width: 400px;
 }
-  
+
 .example-header-image {
     background-image: url('/assets/lasse.jpeg');
+    background-size: cover;
+}
+
+.angular-header-icon {
+    background-image: url('/assets/angular.png');
+    background-size: cover;
+}
+
+.aws-header-icon {
+    background-image: url('/assets/aws.png');
     background-size: cover;
 }
 
@@ -36,6 +46,15 @@
     font-weight: 600;
     color: #757575;
     font-size: 12px;
+}
+
+
+.mat-menu-content, .mat-menu-panel  {
+    background: #f2f2f2;
+}
+
+.mat-toolbar {
+    background: #f2f2f2;
 }
 
 .mat-card {

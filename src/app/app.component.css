@@ -11,3 +11,13 @@ a {
 a:visited {
     color: black;
 }
+
+.menu-item-button {
+    text-align: left;
+    width: 100%;
+}
+
+.center {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}

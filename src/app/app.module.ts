@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatProgressSpinnerModule, MatButtonModule, MatCardModule, MatToolbarModule, MatGridListModule, MatIconModule, MatChipsModule, MatExpansionModule, MatListModule} from '@angular/material';
+import {
+  MatProgressSpinnerModule, MatButtonModule, MatCardModule, MatToolbarModule,
+  MatGridListModule, MatIconModule, MatChipsModule, MatExpansionModule,
+  MatListModule, MatMenuModule} from '@angular/material';
 import {MatBadgeModule} from '@angular/material/badge';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
@@ -18,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxMdModule } from 'ngx-md';
 import { StateService } from 'src/app/service/state.service';
 import { TestComponent } from './test/test.component';
+import { AboutSiteComponent } from './about-site/about-site.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,8 @@ import { TestComponent } from './test/test.component';
     TagComponent,
     ArticlesComponent,
     ArticleComponent,
-    TestComponent
+    TestComponent,
+    AboutSiteComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +47,7 @@ import { TestComponent } from './test/test.component';
     MatChipsModule,
     MatExpansionModule,
     MatListModule,
+    MatMenuModule,
     AppRoutingModule,
     HttpClientModule,
     MatProgressSpinnerModule,
