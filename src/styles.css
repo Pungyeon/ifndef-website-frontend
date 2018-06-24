@@ -20,6 +20,11 @@
     background-size: cover;
 }
 
+.terraform-header-icon {
+    background-image: url('/assets/terraform.png');
+    background-size: cover;
+}
+
 .aws-header-icon {
     background-image: url('/assets/aws.png');
     background-size: cover;

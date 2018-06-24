@@ -8,8 +8,8 @@ fxLayoutAlign="center">
       <mat-card style="margin-top: 10px" >
         <mat-card-header>
           <div mat-card-avatar class="angular-header-icon"></div>
-          <mat-card-title>Angular 6</mat-card-title>
-          <mat-card-subtitle>Javascript Framework</mat-card-subtitle>
+          <mat-card-title>Angular</mat-card-title>
+          <mat-card-subtitle>User Interface</mat-card-subtitle>
         </mat-card-header>
         <h4>What is Angular?</h4>
         <p>
@@ -39,10 +39,42 @@ fxLayoutAlign="center">
             <mat-card-title>AWS Lambda</mat-card-title>
             <mat-card-subtitle>NodeJS</mat-card-subtitle>
           </mat-card-header>
-          <h4>What?</h4>
-          <p>Here is some text explaining cloud services and AWS</p>
-          <h4> Why? </h4>
-          <p> Here is an explanation of why I have chosen AWS Lambda and NodeJS as an API server</p>
+          <h4>What is Lambda?</h4>
+          <p>
+            AWS Lambda is a Amazon's option for running code, without having to operate a server. This is 
+            more commonly known as 'serverless' technology. Why this name was chosen, I'm not sure... there 
+            is still a server running your code, you just don't have to interact with it. This simplifies 
+            deploying code for developers, because they no longer need traditional operations skills. Networking, 
+            OS, security patches etc. are just no longer a concern. This works great for small dev teams, with 
+            little or no available operation resources. 
+          </p>
+          <p>
+            Another great feature of AWS Lambda (and most serverless computing technologies), is that it is also 
+            auto-scaling. I don't need to think about how many resources to put aside for my application. AWS 
+            will handle this. To learn more about AWS Lambda, I recommend going here: <a href="https://aws.amazon.com/lambda/">https://aws.amazon.com/lambda/</a>. 
+          </p>
+          <h4> Why AWS Lambda? </h4>
+          <p>
+            So, there are several questions to this. First of all, why AWS? Well... I can't really argue for why not Azure or GCP. 
+            There are only so many different ways that you can offer running code, and honestly, they aren't all that different. 
+            I chose AWS, because, like with Angular, this is what I know and therefore it's the easiest option for me.
+          </p>
+          <p>
+            The second question is why serverless at all? Well, as stated above. This is ideal for small dev teams. 
+            The dev team behind this site is me... so, I feel we can quite comfortably call this a small dev team. 
+            The less the surface area of operation for me, the better. Serverless computing is the best choice for 
+            this reason.
+          </p>
+          <p>
+            The last question is why NodeJS for serverless? Well, personally, I would have preferred writing the 
+            backend in Golang. Perhaps, I will write the database integration in Golang at some point. But, the 
+            matter of the fact is, that the NodeJS support in AWS Lambda is spectacular. Deployment and testing are 
+            both much easier in NodeJS (in my opinion) and the performance for smaller Lambda functions is 
+            actually almost similar (<a href="https://hackernoon.com/aws-lambda-go-vs-node-js-performance-benchmark-1c8898341982">proof</a>)
+          </p>
+          <p>
+            ...also, it's cheap :)
+          </p>
       </mat-card>
       <mat-card style="margin-top: 10px" >
         <mat-card-header>
@@ -50,10 +82,26 @@ fxLayoutAlign="center">
             <mat-card-title>AWS DynamoDB</mat-card-title>
             <mat-card-subtitle>Database</mat-card-subtitle>
           </mat-card-header>
-          <h4>What?</h4>
-          <p>Here is some text explaining cloud services and AWS</p>
-          <h4> Why? </h4>
-          <p> Here is an explanation of why I have chosen DynamoDB as a databse</p>
+          <h4>What is DynamoDB?</h4>
+          <p>
+            DynamoDB is a proprietary No-SQL database service provided by AWS. Much like with serverless computing 
+            this 'Database-as-a-service', basically gives you a database to work with, without having to 
+            setup a server... or a database for that matter. Basically, you just create a table via. a DynamoDB 
+            query and then you are ready to go. It's pretty impressive and more importantly, makes life for 
+            developers a lot easier.
+          </p>
+          <h4> Why DynamoDB? </h4>
+          <p>
+            It makes life easier. I like it, when life is easy. That being said, one of the typical downfalls when 
+            developing serverless applications, is overlooking the auto-scaling of lambda function, doesn't translate 
+            well, to a normal database that isn't auto-scaling. If your application get's too busy, you database will 
+            explode. This we want to avoid. With DynamoDB, we don't have to think about this, because just like lambda 
+            functions, DynamoDB offers auto-scaling, so out application will scale together with our Database.
+          </p>
+          <p>
+            I could also have chosen the GCP or Azure versions of this, however, keeping our application makes permissions 
+            and deployment quite a lot easier. And again... I like easy :)
+          </p>
       </mat-card>
       <mat-card style="margin-top: 10px" >
         <mat-card-header>
@@ -62,6 +110,21 @@ fxLayoutAlign="center">
             <mat-card-subtitle>Content Delivery</mat-card-subtitle>
           </mat-card-header>
       </mat-card>
+      <mat-card style="margin-top: 10px" >
+        <mat-card-header>
+            <div mat-card-avatar class="aws-header-icon"></div>
+            <mat-card-title>AWS API Gateway</mat-card-title>
+            <mat-card-subtitle>Proxy & Routing</mat-card-subtitle>
+          </mat-card-header>
+      </mat-card>
     </div>
+    <h2 class="pungy-title">Other technology</h2>
+    <mat-card style="margin-top: 10px" >
+      <mat-card-header>
+          <div mat-card-avatar class="terraform-header-icon"></div>
+          <mat-card-title>Terraform</mat-card-title>
+          <mat-card-subtitle>Deployment</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
   </div>
 </div>
