@@ -9,10 +9,23 @@ fxLayoutAlign="center">
         <mat-card-header>
           <div mat-card-avatar style="background-image: url('/assets/circuit-board.jpg');" class="header-image"></div>
           <mat-card-title>Architecture</mat-card-title>
-          <mat-card-subtitle>Visio Fun!</mat-card-subtitle>
+          <mat-card-subtitle>Pretty icons</mat-card-subtitle>
         </mat-card-header>
+        <p>
+          The workflow of a user request for this site, is mapped below. A user will request www.pungy.net (which is 
+          hosted on Route53... that's not in the diagram though). This request will be routed to AWS CloudFront, which 
+          will forward the request to an S3 bucket, which hosts the minimised javascript code. 
+        </p>
         <img src="/assets/pungy-site.png" alt="site-overview" style="width: 100%">
-        <p>look at that!</p>
+        <p style="margin-top: 0px">
+          The javascript will eb sent to the user and will be invoked on the clients machine. The UI will then request 
+          information from the backend. This request will go to AWS API Gateway, which in turn will forward (and authorize) 
+          the request to AWS Lambda, which will invoke a NodeJS code to retrieve the data from DynamoDB. 
+        </p>
+        <p>
+          So, perhaps a little complicated for hosting a simple website. However, once setup, there is little to no maintanence and 
+          it's favourably cheap to host. 
+        </p>
       </mat-card>
       <h2 class="pungy-title">Frontend</h2>
       <mat-card style="margin-top: 10px">
