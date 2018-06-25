@@ -5,10 +5,7 @@ import { Article } from "src/app/model/article.model";
 
 @Injectable()
 export class StateService {
-    constructor(private httpClient: HttpClient) {
-        console.log("ding dong")
-      
-    }
+    constructor(private httpClient: HttpClient) {}
 
     selectedArticle: string;
     selectedArticleSub: Subject<string> = new Subject<string>();
@@ -73,7 +70,7 @@ export class StateService {
             this.selectedArticle = data;
             this.selectedArticleSub.next(data);
         }, (err: HttpErrorResponse) => {
-            console.log("error on request: " + err.message);
+            ("error on request: " + err.message);
         });
     }
 
@@ -86,7 +83,7 @@ export class StateService {
                 console.log("article name: " + article.Title);
         }, (err: HttpErrorResponse) => {
             console.log("error on request: " + err.message);
-        }) ;
+        });
     }
 
     getSelectedArticle() {

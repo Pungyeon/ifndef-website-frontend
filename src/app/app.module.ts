@@ -22,6 +22,7 @@ import { NgxMdModule } from 'ngx-md';
 import { StateService } from 'src/app/service/state.service';
 import { TestComponent } from './test/test.component';
 import { AboutSiteComponent } from './about-site/about-site.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AboutSiteComponent } from './about-site/about-site.component';
     ArticlesComponent,
     ArticleComponent,
     TestComponent,
-    AboutSiteComponent
+    AboutSiteComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

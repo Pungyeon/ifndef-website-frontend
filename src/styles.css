@@ -25,6 +25,11 @@
     background-size: cover;
 }
 
+.oops-header-icon {
+    background-image: url('/assets/oops.png');
+    background-size: cover;
+}
+
 .aws-header-icon {
     background-image: url('/assets/aws.png');
     background-size: cover;

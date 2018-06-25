@@ -6,6 +6,7 @@ import { FrontPageComponent } from "./front-page/front-page.component";
 import { ArticleComponent } from "./article/article.component";
 import { TestComponent } from "./test/test.component";
 import { AboutSiteComponent } from "src/app/about-site/about-site.component";
+import { ErrorComponent } from "./error/error.component";
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,7 +15,8 @@ const routes: Routes = [
     { path: 'about-site', component: AboutSiteComponent },
     { path: 'articles', component: ArticlesComponent },
     { path: 'article', component: ArticleComponent},
-    { path: '**', redirectTo: 'home'}
+    { path: 'error', component: ErrorComponent },
+    { path: '**', redirectTo: 'error'}
   ];
   
   @NgModule({
