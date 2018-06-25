@@ -14,12 +14,12 @@ fxLayoutAlign="center">
         <p>
           The workflow of a user request for this site, is mapped below. A user will request www.pungy.net (which is 
           hosted on Route53... that's not in the diagram though). This request will be routed to AWS CloudFront, which 
-          will forward the request to an S3 bucket, which hosts the minimised javascript code. 
+          will forward the request to an S3 bucket, which hosts the minimised javascript UI. 
         </p>
-        <img src="/assets/pungy-site.png" alt="site-overview" style="width: 100%">
+        <img src="/assets/pungy-site.png" alt="site-overview" style="width: 100%; object-fit: cover;">
         <p style="margin-top: 0px">
-          The javascript will eb sent to the user and will be invoked on the clients machine. The UI will then request 
-          information from the backend. This request will go to AWS API Gateway, which in turn will forward (and authorize) 
+          The javascript UI will be sent to the user and will be invoked on the clients machine. The UI will then request 
+          information from the backend. These requests will go to AWS API Gateway, which in turn will forward (and authorize) 
           the request to AWS Lambda, which will invoke a NodeJS code to retrieve the data from DynamoDB. 
         </p>
         <p>
@@ -54,6 +54,9 @@ fxLayoutAlign="center">
           Angular is definitely the least hype of the three frameworks. But, as I am not a front-end developer, I like sticking to what I 
           know, rather than chasing the latest and greatest.
         </p>
+        <a class="contact-icon" href="https://github.com/Pungyeon/ifndef-website-frontend">
+            <i class="fab fa-github" style="font-size: 2.5em; color: #BBB"></i>
+        </a>
       </mat-card>
       <h2 class="pungy-title">Backend</h2>
       <mat-card style="margin-top: 10px" >
@@ -98,6 +101,9 @@ fxLayoutAlign="center">
           <p>
             ...also, it's cheap :)
           </p>
+          <a class="contact-icon" href="https://github.com/Pungyeon/ifndef-website">
+            <i class="fab fa-github" style="font-size: 2.5em; color: #BBB"></i>
+        </a>
       </mat-card>
       <mat-card style="margin-top: 10px" >
         <mat-card-header>
@@ -138,6 +144,13 @@ fxLayoutAlign="center">
             <div mat-card-avatar class="aws-header-icon"></div>
             <mat-card-title>AWS API Gateway</mat-card-title>
             <mat-card-subtitle>Proxy & Routing</mat-card-subtitle>
+          </mat-card-header>
+      </mat-card>
+      <mat-card style="margin-top: 10px" >
+        <mat-card-header>
+            <div mat-card-avatar class="aws-header-icon"></div>
+            <mat-card-title>AWS Route 53</mat-card-title>
+            <mat-card-subtitle>Public DNS</mat-card-subtitle>
           </mat-card-header>
       </mat-card>
     </div>
