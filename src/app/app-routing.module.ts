@@ -11,7 +11,8 @@ import { ErrorComponent } from "./error/error.component";
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: FrontPageComponent },
-    { path: 'about', component: AboutMeComponent },
+    // { path: 'about', component: AboutMeComponent },
+    { path: 'about', loadChildren: 'about-me/about-me.module#AboutMeModule'},
     { path: 'about-site', component: AboutSiteComponent },
     { path: 'articles', component: ArticlesComponent },
     { path: 'article', component: ArticleComponent},

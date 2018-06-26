@@ -3,14 +3,13 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MatProgressSpinnerModule, MatButtonModule, MatCardModule, MatToolbarModule,
-  MatGridListModule, MatIconModule, MatChipsModule, MatExpansionModule,
+  MatGridListModule, MatIconModule,
   MatListModule, MatMenuModule} from '@angular/material';
-import {MatBadgeModule} from '@angular/material/badge';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppComponent } from './app.component';
 import { FrontPageComponent } from './front-page/front-page.component';
-import { AboutMeComponent } from './about-me/about-me.component';
+// import { AboutMeComponent } from './about-me/about-me.component';
 import { TagComponent } from './tag/tag.component';
 import { ArticlesComponent } from './articles/articles.component';
 
@@ -28,7 +27,6 @@ import { ErrorComponent } from './error/error.component';
   declarations: [
     AppComponent,
     FrontPageComponent,
-    AboutMeComponent,
     TagComponent,
     ArticlesComponent,
     ArticleComponent,
@@ -45,9 +43,6 @@ import { ErrorComponent } from './error/error.component';
     MatGridListModule,
     FlexLayoutModule,
     MatIconModule,
-    MatBadgeModule,
-    MatChipsModule,
-    MatExpansionModule,
     MatListModule,
     MatMenuModule,
     AppRoutingModule,
