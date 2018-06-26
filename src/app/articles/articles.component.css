@@ -13,10 +13,6 @@
     cursor: pointer;
 }
 
-.article-image {
-    /* nothing to see here */
-}
-
 .loader {
     height: 100px;
     width: 100px;
