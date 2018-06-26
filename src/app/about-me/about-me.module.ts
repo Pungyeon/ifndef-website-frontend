@@ -6,10 +6,12 @@ import { AboutMeComponent } from './about-me.component';
 import {
     MatChipsModule, MatExpansionModule, MatCardModule, MatDividerModule 
     } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
     CommonModule,
+    FlexLayoutModule,
     AboutMeRoutingModule,
     MatChipsModule,
     MatExpansionModule,
