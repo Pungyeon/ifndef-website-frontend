@@ -4,14 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from "@angular/core";
 import { FrontPageComponent } from "./front-page/front-page.component";
 import { ArticleComponent } from "./article/article.component";
-import { TestComponent } from "./test/test.component";
 import { AboutSiteComponent } from "src/app/about-site/about-site.component";
 import { ErrorComponent } from "./error/error.component";
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: FrontPageComponent },
-    // { path: 'about', component: AboutMeComponent },
     { path: 'about', loadChildren: 'about-me/about-me.module#AboutMeModule'},
     { path: 'about-site', component: AboutSiteComponent },
     { path: 'articles', component: ArticlesComponent },

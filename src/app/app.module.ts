@@ -2,15 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-  MatProgressSpinnerModule, MatButtonModule, MatCardModule, MatToolbarModule,
-  MatGridListModule, MatIconModule,
-  MatListModule, MatMenuModule} from '@angular/material';
+  MatButtonModule, MatDividerModule,
+  MatCardModule, MatToolbarModule, MatIconModule,
+  MatMenuModule} from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppComponent } from './app.component';
 import { FrontPageComponent } from './front-page/front-page.component';
-// import { AboutMeComponent } from './about-me/about-me.component';
-import { TagComponent } from './tag/tag.component';
 import { ArticlesComponent } from './articles/articles.component';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +17,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { NgxMdModule } from 'ngx-md';
 import { StateService } from 'src/app/service/state.service';
-import { TestComponent } from './test/test.component';
 import { AboutSiteComponent } from './about-site/about-site.component';
 import { ErrorComponent } from './error/error.component';
 
@@ -27,27 +24,23 @@ import { ErrorComponent } from './error/error.component';
   declarations: [
     AppComponent,
     FrontPageComponent,
-    TagComponent,
     ArticlesComponent,
     ArticleComponent,
-    TestComponent,
     AboutSiteComponent,
     ErrorComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatGridListModule,
-    FlexLayoutModule,
-    MatIconModule,
-    MatListModule,
-    MatMenuModule,
     AppRoutingModule,
-    HttpClientModule,
-    MatProgressSpinnerModule,
+    MatMenuModule, // is used by all
+    MatButtonModule, // is used by all
+    MatToolbarModule, // is used by all
+    HttpClientModule, // ?? maybe possible to exclude this
+    MatCardModule, // EXCLUDE - FrontPage & Menu
+    FlexLayoutModule, // EXCLUDE - FrontPage & Menu
+    MatIconModule, // INCLUDE - about site and me
+    MatDividerModule, // INCLUDE - HOME & ABOUT ME
     NgxMdModule.forRoot()
   ],
   providers: [StateService],
