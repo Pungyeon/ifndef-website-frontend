@@ -23,11 +23,11 @@ import { ErrorComponent } from './error/error.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FrontPageComponent,
-    ArticlesComponent,
-    ArticleComponent,
-    AboutSiteComponent,
-    ErrorComponent
+    FrontPageComponent, // mat-button
+    ArticlesComponent, // mat-card, flexbox
+    ArticleComponent, // mat-icon, mat-card, ngx-md, flexbox
+    AboutSiteComponent, // mat-card, flexbox, 
+    ErrorComponent // mat-card, flexbox
   ],
   imports: [
     BrowserModule,

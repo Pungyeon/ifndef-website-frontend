@@ -11,7 +11,7 @@ import { AboutMeModule } from "./about-me/about-me.module";
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: FrontPageComponent },
-    { path: 'about', loadChildren: ()=> AboutMeModule},
+    { path: 'about', loadChildren: 'src/app/about-me/about-me.module#AboutMeModule'},
     { path: 'about-site', component: AboutSiteComponent },
     { path: 'articles', component: ArticlesComponent },
     { path: 'article', component: ArticleComponent},
