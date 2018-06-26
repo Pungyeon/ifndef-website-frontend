@@ -14,7 +14,7 @@ const routes: Routes = [
     { path: 'about', loadChildren: 'src/app/about-me/about-me.module#AboutMeModule'},
     { path: 'about-site', component: AboutSiteComponent },
     { path: 'articles', component: ArticlesComponent },
-    { path: 'article', component: ArticleComponent},
+    { path: 'article', loadChildren: 'src/app/article/article.module#ArticleModule'},
     { path: 'error', component: ErrorComponent },
     { path: '**', redirectTo: 'error'}
   ];

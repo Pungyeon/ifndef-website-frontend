@@ -12,10 +12,8 @@ import { FrontPageComponent } from './front-page/front-page.component';
 import { ArticlesComponent } from './articles/articles.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { ArticleComponent } from './article/article.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { NgxMdModule } from 'ngx-md';
 import { StateService } from 'src/app/service/state.service';
 import { AboutSiteComponent } from './about-site/about-site.component';
 import { ErrorComponent } from './error/error.component';
@@ -25,7 +23,7 @@ import { ErrorComponent } from './error/error.component';
     AppComponent,
     FrontPageComponent, // mat-button
     ArticlesComponent, // mat-card, flexbox
-    ArticleComponent, // mat-icon, mat-card, ngx-md, flexbox
+    // ArticleComponent, // mat-icon, mat-card, ngx-md, flexbox
     AboutSiteComponent, // mat-card, flexbox, 
     ErrorComponent // mat-card, flexbox
   ],
@@ -40,8 +38,7 @@ import { ErrorComponent } from './error/error.component';
     MatCardModule, // EXCLUDE - FrontPage & Menu
     FlexLayoutModule, // EXCLUDE - FrontPage & Menu
     MatIconModule, // INCLUDE - about site and me
-    MatDividerModule, // INCLUDE - HOME & ABOUT ME
-    NgxMdModule.forRoot()
+    MatDividerModule // INCLUDE - HOME & ABOUT ME
   ],
   providers: [StateService],
   bootstrap: [AppComponent]
