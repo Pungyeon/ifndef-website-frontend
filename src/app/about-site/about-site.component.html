@@ -14,11 +14,11 @@ fxLayoutAlign="center">
         <p>
           The workflow of a user request for this site, is mapped below. A user will request www.pungy.net (which is 
           hosted on Route53... that's not in the diagram though). This request will be routed to AWS CloudFront, which 
-          will forward the request to an S3 bucket, which hosts the minimised javascript UI. 
+          will forward the request to an S3 bucket, hosting the Javascript UI. 
         </p>
         <img src="/assets/pungy-site.png" alt="site-overview" style="width: 100%; object-fit: cover;">
         <p style="margin-top: 0px">
-          The javascript UI will be sent to the user and will be invoked on the clients machine. The UI will then request 
+          The Javascript UI will be sent to the user and will be invoked on the clients machine. The UI will then request 
           information from the backend. These requests will go to AWS API Gateway, which in turn will forward (and authorize) 
           the request to AWS Lambda, which will invoke a NodeJS code to retrieve the data from DynamoDB. 
         </p>
@@ -36,7 +36,7 @@ fxLayoutAlign="center">
         </mat-card-header>
         <h4>What is Angular?</h4>
         <p>
-          Angular is an open-source javascript framework for developing graphical user interfaces. Angular
+          Angular is an open-source Javascript framework for developing graphical user interfaces. Angular
           is Google backed and is technically a 2.0 version of the popular AngularJS framework. To learn more about Angular, 
           I recommend visiting the official site: <a href="https://angular.io/"> https://angular.io/ </a>
         </p>
@@ -113,8 +113,8 @@ fxLayoutAlign="center">
           </mat-card-header>
           <h4>What is DynamoDB?</h4>
           <p>
-            DynamoDB is a proprietary No-SQL database service provided by AWS. Much like with serverless computing 
-            this 'Database-as-a-service', basically gives you a database to work with, without having to 
+            DynamoDB is a proprietary NoSQL database service provided by AWS. Much like with serverless computing 
+            this 'database-as-a-service', basically gives you a database to work with, without having to 
             setup a server... or a database for that matter. Basically, you just create a table via. a DynamoDB 
             query and then you are ready to go. It's pretty impressive and more importantly, makes life for 
             developers a lot easier.
