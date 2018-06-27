@@ -10,6 +10,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { StateService } from 'src/app/service/state.service';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatToolbarModule, // is used by all
     MatMenuModule, // is used by all
     HttpClientModule, // ?? maybe possible to exclude this
-    MatDividerModule
+    MatDividerModule, ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [StateService],
   bootstrap: [AppComponent]
