@@ -1,0 +1,29 @@
+<mat-toolbar style="color: black">
+  <!-- span style="color: rgb(0, 0, 0, 40%);">@ifndef_lmj</span-->
+  <div class="center">
+    <a routerLink="home" class="menu-link">
+      <button mat-button>Home</button>
+    </a>
+    <a routerLink="articles" class="menu-link">
+      <button mat-button>Articles</button>
+    </a>
+    <!-- a class="menu-link">About</a -->
+    
+    <button mat-button [matMenuTriggerFor]="appMenu">
+      About
+    </button>
+  </div>
+
+  <mat-menu #appMenu="matMenu">
+    <a class="menu-link">
+      <button mat-button disabled>About</button>
+    </a><br>
+    <mat-divider></mat-divider>
+    <a routerLink="about">
+      <button mat-button class="menu-item-button"> Me </button>
+    </a><br>
+    <a routerLink="about-site">
+      <button mat-button class="menu-item-button">This site</button>
+    </a>
+  </mat-menu>
+</mat-toolbar>
