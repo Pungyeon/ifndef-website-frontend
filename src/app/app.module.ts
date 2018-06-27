@@ -11,14 +11,9 @@ import { StateService } from 'src/app/service/state.service';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 
-import { AboutSiteComponent } from './about-site/about-site.component';
-import { ErrorComponent } from './error/error.component';
-
 @NgModule({
   declarations: [
     AppComponent,
-    AboutSiteComponent, // mat-card, flexbox, 
-    ErrorComponent, // mat-card, flexbox
     ToolbarComponent
   ],
   imports: [
@@ -29,10 +24,7 @@ import { ErrorComponent } from './error/error.component';
     MatToolbarModule, // is used by all
     MatMenuModule, // is used by all
     HttpClientModule, // ?? maybe possible to exclude this
-    MatCardModule, // EXCLUDE - FrontPage & Menu
-    FlexLayoutModule, // EXCLUDE - FrontPage & Menu
-    MatDividerModule,
-    MatButtonModule
+    MatDividerModule
   ],
   providers: [StateService],
   bootstrap: [AppComponent]
