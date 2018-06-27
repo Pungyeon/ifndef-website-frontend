@@ -9,16 +9,14 @@ import {
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { StateService } from 'src/app/service/state.service';
 import { AppComponent } from './app.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
-import { ArticlesComponent } from './articles/articles.component';
 import { AboutSiteComponent } from './about-site/about-site.component';
 import { ErrorComponent } from './error/error.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArticlesComponent, // mat-card, flexbox
     AboutSiteComponent, // mat-card, flexbox, 
     ErrorComponent, // mat-card, flexbox
     ToolbarComponent
