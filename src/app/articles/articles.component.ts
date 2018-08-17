@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StateService } from '../service/state.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Article } from 'src/app/model/article.model';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-articles',
@@ -29,7 +30,11 @@ export class ArticlesComponent implements OnInit {
 
   onArticleSelect(article: Article) {
     this.stateService.increasetViewCount(article);
-    this.stateService.setSelectedArticle(article);
-    this.router.navigate(['/article']);
+    this.stateService.retrieveSelectedArticle(article).subscribe((data) => {
+      this.stateService.setSelectedArticle(data);
+      this.router.navigate(['/article']);
+    }, (err: HttpErrorResponse) => {
+      ("error on request: " + err.message);
+    });
   }
 }

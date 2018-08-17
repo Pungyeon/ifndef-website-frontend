@@ -7,7 +7,7 @@ import { Article } from "src/app/model/article.model";
 export class StateService {
     constructor(private httpClient: HttpClient) {}
 
-    selectedArticle: string;
+    selectedArticle = "Error - no article selected...";
     selectedArticleSub: Subject<string> = new Subject<string>();
 
     articlesSub: Subject<Article[]> = new Subject<Article[]>();
@@ -65,13 +65,13 @@ export class StateService {
         } 
     ]
 
-    setSelectedArticle(article: Article) {
-        this.httpClient.get(article.MarkdownLink, { responseType: 'text'}).subscribe((data) => {
-            this.selectedArticle = data;
-            this.selectedArticleSub.next(data);
-        }, (err: HttpErrorResponse) => {
-            ("error on request: " + err.message);
-        });
+    retrieveSelectedArticle(article: Article) {
+        return this.httpClient.get(article.MarkdownLink, { responseType: 'text'})
+    }
+
+    setSelectedArticle(data) {
+        this.selectedArticle = data;
+        this.selectedArticleSub.next(data);
     }
 
     increasetViewCount(article: Article) {

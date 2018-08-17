@@ -23,8 +23,6 @@ export class ArticleComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.stateService.selectedArticleSub.subscribe((data) => {
-      this.content = data;
-    });
+    this.content = this.stateService.getSelectedArticle();
   }
 }
