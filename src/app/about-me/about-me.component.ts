@@ -14,7 +14,7 @@ export class AboutMeComponent implements OnInit {
       Company: "Credocom A/S",
       Title: "Solutions Architect",
       Date: "08/2016 - Present",
-      Description: "Specialising within development of automatino tools for analysis network data, helping monitoring, implementation and forensic analysis.",
+      Description: "Specialising within development of automation tools for analysis network data, helping monitoring, implementation and forensic analysis.",
       Projects: [
         "Technical lead on PinPoint solution, enabling network engineers to easily retrieve and analyse packet captures from network recorders. The solution delivered using a cloud-native approach, to ensure scalability and agility in development.",
         "Lead Developer on analysis tool for 802.1x deployment for large international organisation, to provide network engineers with data on client information and simplified management of clients. The tool assisting in a smooth deployment for over 40.000 clients.",
@@ -54,9 +54,7 @@ export class AboutMeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   onShowExperience() {
     this.showExperience = true;
