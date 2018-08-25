@@ -95,10 +95,7 @@ export class StateService {
             this.articlesSub.next(data.body.Items);
         }, (err: HttpErrorResponse) => {
             console.log("error on request: " + err.message);
-        });  
-        /* // http call goes here
-        const thisPretendsToBeAnHTTPCall = this.articles;
-        this.articlesSub.next(thisPretendsToBeAnHTTPCall); */
+        });
     }
 
 

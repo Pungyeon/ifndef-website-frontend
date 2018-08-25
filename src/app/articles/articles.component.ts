@@ -21,7 +21,9 @@ export class ArticlesComponent implements OnInit {
 
   ngOnInit() {
     this.stateService.articlesSub.subscribe((data) => {
-      this.articles = data;
+      this.articles = data.sort((a, b): number => {
+        return b.ArticleId - a.ArticleId;
+      });
       this.stateService.setSelectedArticle(this.articles[0]);
       this.loading = false;
     });
@@ -30,6 +32,10 @@ export class ArticlesComponent implements OnInit {
 
   onArticleSelect(article: Article) {
     this.stateService.increasetViewCount(article);
+    if (article.MarkdownLink.startsWith("https://raw.githubusercontent.com/Pungyeon") === false) {
+      window.location.href = article.MarkdownLink;
+      return;
+    }
     this.stateService.retrieveSelectedArticle(article).subscribe((data) => {
       this.stateService.setSelectedArticle(data);
       this.router.navigate(['/article']);
@@ -37,4 +43,8 @@ export class ArticlesComponent implements OnInit {
       ("error on request: " + err.message);
     });
   }
+
+  onExternalArticleSelect(article: Article) {
+    window.location.href = article.MarkdownLink;
+  } 
 }
