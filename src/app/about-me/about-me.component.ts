@@ -11,9 +11,18 @@ export class AboutMeComponent implements OnInit {
   panelOpenState: boolean = false;
   experience = [
     {
+      Company: "Corti",
+      Title: "Software Engineer",
+      Date: "11/2018 - Present",
+      Description: "Specialising in creating backend systems for intermediates between machine learning and frontend systems, ensuring stability and performance",
+      Projects: [
+        "Backend developer on the Corti cloud service backend",
+      ]
+    },
+    {
       Company: "Credocom A/S",
       Title: "Solutions Architect",
-      Date: "08/2016 - Present",
+      Date: "08/2016 - 11/2018",
       Description: "Specialising within development of automation tools for analysis network data, helping monitoring, implementation and forensic analysis.",
       Projects: [
         "Technical lead on PinPoint solution, enabling network engineers to easily retrieve and analyse packet captures from network recorders. The solution delivered using a cloud-native approach, to ensure scalability and agility in development.",
