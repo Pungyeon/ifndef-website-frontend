@@ -23,17 +23,17 @@ fxLayoutAlign="center">
         *ngFor="let article of articles"
         (click)="onArticleSelect(article)"
         >
-        <img mat-card-image class="article-image" src={{article.Image}} alt="could not load image..." style="height: 150px; object-fit: contain; width: 99%; margin: 0.5%">
+        <img mat-card-image class="article-image" src={{article.image}} alt="could not load image..." style="height: 150px; object-fit: contain; width: 99%; margin: 0.5%">
         <mat-card-content>
           <li style="list-style-type: none; margin: 10px 0 10px 0">
-            <span class="tag" *ngFor="let tag of article.Tags">{{tag.toUpperCase()}}</span>
+            <span class="tag" *ngFor="let tag of article.tags">{{tag.toUpperCase()}}</span>
           </li>
-          <mat-card-title> {{article.Title}} </mat-card-title>
+          <mat-card-title> {{article.title}} </mat-card-title>
           <li style="list-style-type: none; margin: 10px 0 10px 0">
-            <span class="footer"> {{article.ArticleDate}} </span>
+            <span class="footer"> {{article.article_date}} </span>
             <span class="footer"> • </span>
             <span class="footer">
-                {{article.ViewCount}} VIEWS
+                {{article.view_count}} VIEWS
             </span>
           </li>
         </mat-card-content>

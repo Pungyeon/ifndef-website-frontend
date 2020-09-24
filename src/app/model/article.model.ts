@@ -1,10 +1,10 @@
 export class Article {
-    ArticleId: number;
-    ArticleDate: string;
-    Title: string;
-    Description: string;
-    Tags: string[];
-    Image: string;
-    ViewCount: number;
-    MarkdownLink: string;
+    article_id: number;
+    article_date: string;
+    title: string;
+    description: string;
+    tags: string[];
+    image: string;
+    view_count: number;
+    markdown_link: string;
 }

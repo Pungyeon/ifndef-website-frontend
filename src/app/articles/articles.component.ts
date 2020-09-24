@@ -21,8 +21,9 @@ export class ArticlesComponent implements OnInit {
 
   ngOnInit() {
     this.stateService.articlesSub.subscribe((data) => {
+      console.log(data);
       this.articles = data.sort((a, b): number => {
-        return b.ArticleId - a.ArticleId;
+        return b.article_id - a.article_id;
       });
       this.stateService.setSelectedArticle(this.articles[0]);
       this.loading = false;
@@ -32,8 +33,8 @@ export class ArticlesComponent implements OnInit {
 
   onArticleSelect(article: Article) {
     this.stateService.increasetViewCount(article);
-    if (article.MarkdownLink.startsWith("https://raw.githubusercontent.com/Pungyeon") === false) {
-      window.location.href = article.MarkdownLink;
+    if (article.markdown_link.startsWith("https://raw.githubusercontent.com/Pungyeon") === false) {
+      window.location.href = article.markdown_link;
       return;
     }
     this.stateService.retrieveSelectedArticle(article).subscribe((data) => {
@@ -45,6 +46,6 @@ export class ArticlesComponent implements OnInit {
   }
 
   onExternalArticleSelect(article: Article) {
-    window.location.href = article.MarkdownLink;
+    window.location.href = article.markdown_link;
   } 
 }
